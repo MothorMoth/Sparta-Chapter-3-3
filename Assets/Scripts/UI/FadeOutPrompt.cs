@@ -14,11 +14,11 @@ public class FadeOutPrompt : MonoBehaviour
         _text = GetComponent<TextMeshProUGUI>();
     }
 
-    private void OnEnable()
+    public void OnPromptText(string str)
     {
+        _text.text = str;
         StartCoroutine(FadeOut());
     }
-
 
     private IEnumerator FadeOut()
     {

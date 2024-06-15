@@ -26,8 +26,7 @@ public class InputController : MonoBehaviour
         {
             if (_settingPanel.activeInHierarchy) return;
 
-            OnClickEvent?.Invoke();
-            GameManager.Instance.AddLog(GameManager.Instance.LogGainAmount);
+            ClickEvent();
         }
     }
 
@@ -41,5 +40,11 @@ public class InputController : MonoBehaviour
     private void OnMouseExit()
     {
         _clickText.gameObject.SetActive(false);
+    }
+
+    public void ClickEvent()
+    {
+        OnClickEvent?.Invoke();
+        GameManager.Instance.AddLog(GameManager.Instance.LogGainAmount);
     }
 }

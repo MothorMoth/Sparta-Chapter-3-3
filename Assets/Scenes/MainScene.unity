@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5c9c273f9a7f94fab94c3e767c9d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _promptText: {fileID: 1531495155}
+  _promptText: {fileID: 1531495157}
 --- !u!1 &1491129482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,7 +3288,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491129485}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2145066528}
+        m_TargetAssemblyTypeName: AutoClickButton, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1491129485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3509,7 +3521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Not Enough Logs!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad4b4f1efc52a0f4b85d7f79a01f67c1, type: 2}
   m_sharedMaterial: {fileID: 2562423325874116269, guid: ad4b4f1efc52a0f4b85d7f79a01f67c1, type: 2}
@@ -5139,6 +5151,7 @@ GameObject:
   - component: {fileID: 2145066525}
   - component: {fileID: 2145066527}
   - component: {fileID: 2145066526}
+  - component: {fileID: 2145066528}
   m_Layer: 5
   m_Name: Auto
   m_TagString: Untagged
@@ -5205,6 +5218,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145066524}
   m_CullTransparentMesh: 1
+--- !u!114 &2145066528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145066524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c62a59a2647bd04cb6535a00920297a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 7108585106582576181}
+  _promptText: {fileID: 1531495157}
 --- !u!1001 &1146599397460675582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5334,6 +5361,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7108585106582576183}
   m_SourcePrefab: {fileID: 100100000, guid: 56e2c0b7807a0e94b8e724cdb5e9ea46, type: 3}
+--- !u!114 &7108585106582576181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6097361423571804209, guid: 56e2c0b7807a0e94b8e724cdb5e9ea46, type: 3}
+  m_PrefabInstance: {fileID: 4105696107373019460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249742282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8cfde6e1fc69743927124a6656d24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7108585106582576183
 MonoBehaviour:
   m_ObjectHideFlags: 0
