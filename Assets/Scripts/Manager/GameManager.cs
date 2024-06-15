@@ -3,7 +3,8 @@ public class GameManager : Singleton<GameManager>
     public int Gold { get; private set; }
     public int Log { get; private set; }
 
-    public int LogGainAmount { get; private set; } = 1;
+    public int level = 1;
+    public int logGainAmount = 1;
 
     public void AddGold(int amount)
     {

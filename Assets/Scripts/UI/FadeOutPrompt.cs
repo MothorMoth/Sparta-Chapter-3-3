@@ -7,7 +7,7 @@ public class FadeOutPrompt : MonoBehaviour
     private TextMeshProUGUI _text;
 
     private float _decreaseValue = 0.01f;
-    private float _decreaseRate = 0.02f;
+    private float _delayTime = 0.02f;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class FadeOutPrompt : MonoBehaviour
             alpha -= _decreaseValue;
             UpdateTextColor(alpha);
 
-            yield return new WaitForSeconds(_decreaseRate);
+            yield return new WaitForSeconds(_delayTime);
         }
 
         gameObject.SetActive(false);

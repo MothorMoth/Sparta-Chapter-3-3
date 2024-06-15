@@ -1690,6 +1690,7 @@ GameObject:
   - component: {fileID: 929406761}
   - component: {fileID: 929406764}
   - component: {fileID: 929406763}
+  - component: {fileID: 929406765}
   m_Layer: 5
   m_Name: Upgrade
   m_TagString: Untagged
@@ -1757,6 +1758,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929406760}
   m_CullTransparentMesh: 1
+--- !u!114 &929406765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929406760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfef158c05c5814e84b7aa9ff59514e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _promptText: {fileID: 1531495157}
+  _levelText: {fileID: 1414298120}
+  _expenseText: {fileID: 974294460}
 --- !u!1 &942871744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,7 +2150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad4b4f1efc52a0f4b85d7f79a01f67c1, type: 2}
   m_sharedMaterial: {fileID: 2562423325874116269, guid: ad4b4f1efc52a0f4b85d7f79a01f67c1, type: 2}
@@ -3037,7 +3053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lv.01
+  m_text: <color=yellow>Lv</color> 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad4b4f1efc52a0f4b85d7f79a01f67c1, type: 2}
   m_sharedMaterial: {fileID: 2562423325874116269, guid: ad4b4f1efc52a0f4b85d7f79a01f67c1, type: 2}
@@ -4380,7 +4396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1942004127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 929406765}
+        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1942004127
 MonoBehaviour:
   m_ObjectHideFlags: 0

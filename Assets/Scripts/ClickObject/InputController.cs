@@ -45,6 +45,6 @@ public class InputController : MonoBehaviour
     public void ClickEvent()
     {
         OnClickEvent?.Invoke();
-        GameManager.Instance.AddLog(GameManager.Instance.LogGainAmount);
+        GameManager.Instance.AddLog(GameManager.Instance.logGainAmount);
     }
 }
