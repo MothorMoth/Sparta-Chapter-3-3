@@ -24,5 +24,7 @@ public class ChangeToGoldButton : MonoBehaviour
             GameManager.Instance.SubtractLog(_exchangeCost);
             GameManager.Instance.AddGold(_exchangedCost);
         }
+
+        SoundManager.Instance.PlaySFX(Sound.CLICK);
     }
 }

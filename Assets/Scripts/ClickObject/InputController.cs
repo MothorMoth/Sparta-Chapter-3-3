@@ -46,5 +46,7 @@ public class InputController : MonoBehaviour
     {
         OnClickEvent?.Invoke();
         GameManager.Instance.AddLog(GameManager.Instance.logGainAmount);
+
+        SoundManager.Instance.PlaySFX(Sound.HIT);
     }
 }

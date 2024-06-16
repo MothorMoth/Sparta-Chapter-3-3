@@ -30,5 +30,7 @@ public class UpgradeButton : MonoBehaviour
             _promptText.gameObject.SetActive(true);
             _promptText.OnPromptText("Not Enough Gold!");
         }
+
+        SoundManager.Instance.PlaySFX(Sound.CLICK);
     }
 }
