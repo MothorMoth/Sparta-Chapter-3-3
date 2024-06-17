@@ -3,7 +3,7 @@ using UnityEngine;
 public class AttractToTarget : MonoBehaviour
 {
     private Vector2 _targetPosition;
-    private float _distanceThreshold = 20f;
+    private float _distanceThreshold = 30f;
 
     private int _exchangedCost = 1;
 

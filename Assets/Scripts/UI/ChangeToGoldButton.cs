@@ -24,10 +24,10 @@ public class ChangeToGoldButton : MonoBehaviour
         {
             GameManager.Instance.SubtractLog(_exchangeCost);
 
-            for (int i = 0; i < _exchangeCost; i++)
+            for (int i = 0; i < _exchangeCost / 2; i++)
             {
-                float randomX = Random.Range(-200f, 200f);
-                float randomY = Random.Range(-200f, 200f);
+                float randomX = Random.Range(-100f, 50f);
+                float randomY = Random.Range(-50f, 100f);
 
                 Vector3 randomPosition = _spawnPosition.position + new Vector3(randomX, randomY, 0f);
 
