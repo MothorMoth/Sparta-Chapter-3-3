@@ -18,6 +18,8 @@ public class AutoClickButton : MonoBehaviour
 
     private void Update()
     {
+        if (_maxTime == 0) return;
+
         _timerBar.fillAmount = _currentTime / _maxTime;
     }
 
