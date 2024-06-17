@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingPanel : MonoBehaviour
@@ -7,6 +8,17 @@ public class SettingPanel : MonoBehaviour
 
     [SerializeField] private Slider _bgmSlider;
     [SerializeField] private Slider _sfxSlider;
+
+    private void Awake()
+    {
+        InitSettingPanel();
+    }
+
+    private void InitSettingPanel()
+    {
+        _bgmSlider.value = SoundManager.Instance._bgmSource.volume;
+        _sfxSlider.value = SoundManager.Instance._sfxSource.volume;
+    }
 
     public void OnClickSettingButton()
     {
@@ -22,5 +34,10 @@ public class SettingPanel : MonoBehaviour
     public void ChangeSFXVolume()
     {
         SoundManager.Instance.SetSFXVolume(_sfxSlider.value);
+    }
+
+    public void OnClickExit()
+    {
+        SceneManager.LoadScene(0);
     }
 }

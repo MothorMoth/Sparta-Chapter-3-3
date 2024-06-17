@@ -21,13 +21,15 @@ public class SoundManager : Singleton<SoundManager>
     [SerializeField] private AudioClip _bgmClip;
     [SerializeField] private List<SFXClip> _sfxClips;
 
-    private AudioSource _bgmSource;
-    private AudioSource _sfxSource;
+    public AudioSource _bgmSource;
+    public AudioSource _sfxSource;
 
     private Dictionary<Sound, AudioClip> _soundDictionary;
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
+
         _soundDictionary = new Dictionary<Sound, AudioClip>();
 
         foreach (var audioClip in _sfxClips)

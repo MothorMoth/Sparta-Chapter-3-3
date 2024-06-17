@@ -1,3 +1,5 @@
+using UnityEngine.SceneManagement;
+
 public class GameManager : Singleton<GameManager>
 {
     public int Gold { get; private set; }
@@ -5,6 +7,28 @@ public class GameManager : Singleton<GameManager>
 
     public int level = 1;
     public int logGainAmount = 1;
+
+    public override void Awake()
+    {
+        base.Awake();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        InitializeData();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        InitializeData();
+    }
+
+    private void InitializeData()
+    {
+        Gold = 0;
+        Log = 0;
+        level = 1;
+        logGainAmount = 1;
+    }
 
     public void AddGold(int amount)
     {

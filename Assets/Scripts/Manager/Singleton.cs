@@ -11,7 +11,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 _instance = (T)FindAnyObjectByType(typeof(T));
 
-                if (_instance == null )
+                if (_instance == null)
                 {
                     SetupInstance();
                 }
@@ -21,7 +21,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-    private void Awake()
+    public virtual void Awake()
     {
         RemoveDuplicates();
     }
