@@ -3311,6 +3311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _promptText: {fileID: 1531495157}
+  _goldPrefab: {fileID: 0}
 --- !u!1 &1491129482
 GameObject:
   m_ObjectHideFlags: 0

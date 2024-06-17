@@ -3,9 +3,10 @@ using UnityEngine;
 public class ChangeToGoldButton : MonoBehaviour
 {
     private int _exchangeCost = 10;
-    private int _exchangedCost = 1;
 
     [SerializeField] private FadeOutPrompt _promptText;
+    [SerializeField] private GameObject _goldPrefab;
+    [SerializeField] private Transform _spawnPosition;
 
     public void OnClickButton()
     {
@@ -22,7 +23,16 @@ public class ChangeToGoldButton : MonoBehaviour
         else
         {
             GameManager.Instance.SubtractLog(_exchangeCost);
-            GameManager.Instance.AddGold(_exchangedCost);
+
+            for (int i = 0; i < _exchangeCost; i++)
+            {
+                float randomX = Random.Range(-200f, 200f);
+                float randomY = Random.Range(-200f, 200f);
+
+                Vector3 randomPosition = _spawnPosition.position + new Vector3(randomX, randomY, 0f);
+
+                Instantiate(_goldPrefab, randomPosition, Quaternion.identity, transform.root);
+            }
         }
 
         SoundManager.Instance.PlaySFX(Sound.CLICK);
